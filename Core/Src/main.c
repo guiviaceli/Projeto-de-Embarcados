@@ -206,6 +206,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
   }
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+
   green_led.timeout = 500;
   green_led.port = GPIOG;
   green_led.pin = GPIO_PIN_13;
